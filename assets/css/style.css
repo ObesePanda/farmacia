@@ -1,0 +1,316 @@
+
+/**FONTS LOGIN**/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+.logo-login
+{
+    width: 175px;
+}
+.version-sistema
+{
+    font-family: "DM Sans", sans-serif;
+}
+.perfil 
+{
+    font-size: 10px;
+    color: white;
+}
+.perfil  a
+{
+    font-size: 13px;
+    font-weight: 700;
+    color: white;
+}
+.p-25
+{
+    padding: 25px;
+}
+/**NOTIFICACIONES**/
+
+
+.alert>.start-icon {
+    margin-right: 0;
+    min-width: 20px;
+    text-align: center;
+}
+
+.alert>.start-icon {
+    margin-right: 5px;
+}
+
+.greencross
+{
+  font-size:18px;
+      color: #25ff0b;
+    text-shadow: none;
+}
+
+.alert-simple.alert-success
+{
+  border: 1px solid rgba(36, 241, 6, 0.46);
+    background-color: rgba(7, 149, 66, 0.12156862745098039);
+    box-shadow: 0px 0px 2px #259c08;
+    color: #fcfcfc;
+  
+  transition:0.5s;
+  cursor:pointer;
+}
+.alert-success:hover{
+  background-color: rgba(7, 149, 66, 0.35);
+  transition:0.5s;
+}
+.alert-simple.alert-info
+{
+  border: 1px solid rgba(6, 44, 241, 0.46);
+    background-color: rgba(7, 73, 149, 0.12156862745098039);
+    box-shadow: 0px 0px 2px #0396ff;
+    color: #0396ff;
+  text-shadow: 2px 1px #00040a;
+  transition:0.5s;
+  cursor:pointer;
+}
+
+.alert-info:hover
+{
+  background-color: rgba(7, 73, 149, 0.35);
+  transition:0.5s;
+}
+
+.blue-cross
+{
+  font-size: 18px;
+    color: #0bd2ff;
+    text-shadow: none;
+}
+
+.alert-simple.alert-warning
+{
+      border: 1px solid rgba(241, 142, 6, 0.81);
+    background-color: rgba(220, 128, 1, 0.16);
+    box-shadow: 0px 0px 2px #ffb103;
+    color: #f5f3ee;
+    
+  transition:0.5s;
+  cursor:pointer;
+}
+
+.alert-warning:hover{
+  background-color: rgba(220, 128, 1, 0.33);
+  transition:0.5s;
+}
+
+.warning
+{
+      font-size: 18px;
+    color: #ffb40b;
+    text-shadow: none;
+}
+
+.alert-simple.alert-danger
+{
+  border: 1px solid rgba(241, 6, 6, 0.81);
+    background-color: rgba(220, 17, 1, 0.16);
+    box-shadow: 0px 0px 2px #ff0303;
+    color: #ff0303;
+    text-shadow: 2px 1px #00040a;
+  transition:0.5s;
+  cursor:pointer;
+}
+
+.alert-danger:hover
+{
+     background-color: rgba(220, 17, 1, 0.33);
+  transition:0.5s;
+}
+
+.danger
+{
+      font-size: 18px;
+    color: #ff0303;
+    text-shadow: none;
+}
+
+.alert-simple.alert-primary
+{
+  border: 1px solid rgba(6, 241, 226, 0.81);
+    background-color: rgba(1, 204, 220, 0.16);
+    box-shadow: 0px 0px 2px #03fff5;
+    color: #03d0ff;
+    text-shadow: 2px 1px #00040a;
+  transition:0.5s;
+  cursor:pointer;
+}
+
+.alert-primary:hover{
+  background-color: rgba(1, 204, 220, 0.33);
+   transition:0.5s;
+}
+
+.alertprimary
+{
+      font-size: 18px;
+    color: #03d0ff;
+    text-shadow: none;
+}
+
+.square_box {
+    position: absolute;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-top-left-radius: 45px;
+    opacity: 0.302;
+}
+
+.square_box.box_three {
+    background-image: -moz-linear-gradient(-90deg, #290a59 0%, #3d57f4 100%);
+    background-image: -webkit-linear-gradient(-90deg, #290a59 0%, #3d57f4 100%);
+    background-image: -ms-linear-gradient(-90deg, #290a59 0%, #3d57f4 100%);
+    opacity: 0.059;
+    left: -80px;
+    top: -60px;
+    width: 500px;
+    height: 500px;
+    border-radius: 45px;
+}
+
+.square_box.box_four {
+    background-image: -moz-linear-gradient(-90deg, #290a59 0%, #3d57f4 100%);
+    background-image: -webkit-linear-gradient(-90deg, #290a59 0%, #3d57f4 100%);
+    background-image: -ms-linear-gradient(-90deg, #290a59 0%, #3d57f4 100%);
+    opacity: 0.059;
+    left: 150px;
+    top: -25px;
+    width: 550px;
+    height: 550px;
+    border-radius: 45px;
+}
+
+.alert:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: calc(100% - 44px);
+    border-left: 1px solid;
+    border-right: 2px solid;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    left: 0;
+    top: 50%;
+    transform: translate(0,-50%);
+      height: 20px;
+}
+
+.fa-times
+{
+-webkit-animation: blink-1 2s infinite both;
+	        animation: blink-1 2s infinite both;
+}
+
+
+/**
+ * ----------------------------------------
+ * animation blink-1
+ * ----------------------------------------
+ */
+@-webkit-keyframes blink-1 {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+@keyframes blink-1 {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+.close
+{
+   
+    border: none;
+    background: none;
+    color: white;
+    font-size: 30px;
+}
+.panda_pos
+{
+    font-size: 10px;
+}
+.dataTables_filter 
+{
+  display: flex;
+  justify-content: flex-end;
+}
+.dataTables_info
+{
+  font-size: 12px;
+}
+
+#tbl_previous a {
+    display: inline-flex;
+    align-items: center; /* Centra verticalmente el icono y el texto */
+}
+
+#tbl_previous a::before {
+    content: "←"; /* Aquí puedes usar el icono o el carácter que prefieras */
+    margin-right: 5px; /* Espacio entre el icono y el texto */
+    font-size: 1.2em; /* Ajusta el tamaño del icono si es necesario */
+}
+
+#tbl_previous a {
+    text-indent: -9999px; /* Oculta el texto "Anterior" */
+    overflow: hidden; /* Asegúrate de que no se muestre el texto */
+    width: 20px; /* Ajusta el ancho según tu necesidad */
+    height: 20px; /* Ajusta la altura según tu necesidad */
+    background: transparent; /* Si deseas que el fondo sea transparente */
+}
+
+#tbl_next a {
+  display: inline-flex;
+  align-items: center; /* Centra verticalmente el icono y el texto */
+}
+
+#tbl_next a::before {
+  content: "→"; /* Aquí puedes usar el icono o el carácter que prefieras */
+  margin-right: 5px; /* Espacio entre el icono y el texto */
+  font-size: 1.2em; /* Ajusta el tamaño del icono si es necesario */
+}
+
+#tbl_next a {
+  text-indent: -9999px; /* Oculta el texto "Anterior" */
+  overflow: hidden; /* Asegúrate de que no se muestre el texto */
+  width: 20px; /* Ajusta el ancho según tu necesidad */
+  height: 20px; /* Ajusta la altura según tu necesidad */
+  background: transparent; /* Si deseas que el fondo sea transparente */
+}
+.imagen-producto
+{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.ui-autocomplete.dropdown-menu {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+}
+
+.ui-autocomplete .dropdown-item {
+    cursor: pointer;
+}
+
+.ui-autocomplete .dropdown-item:hover {
+    background-color: #429490;
+    color: #fff;
+}
+
