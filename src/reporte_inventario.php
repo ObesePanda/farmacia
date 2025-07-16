@@ -40,7 +40,7 @@ $html = '
 
 while ($producto = mysqli_fetch_assoc($queryProductos)) {
  
-    $queryLotes = mysqli_query($conexion, "SELECT cantidad, fecha_vencimiento FROM lotes WHERE id_producto = {$producto['codproducto']} ORDER BY fecha_vencimiento ASC");
+    $queryLotes = mysqli_query($conexion, "SELECT cantidad, fecha_vencimiento FROM lotes WHERE id_producto = {$producto['codproducto']} AND estado = 'activo' ORDER BY fecha_vencimiento ASC");
     
     $totalInventario = 0;
     $lotesHtml = '';

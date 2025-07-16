@@ -5,7 +5,9 @@ if (empty($_SESSION['active'])) {
 }
 $id_user = $_SESSION['idUser'];
 
-
+$paginaActual = basename($_SERVER['PHP_SELF']);
+$menuProductos = ['tipo.php', 'presentacion.php', 'laboratorio.php', 'productos.php'];
+$activoProductos = in_array($paginaActual, $menuProductos);
 ?>
 
 <!DOCTYPE html>
@@ -28,11 +30,11 @@ $id_user = $_SESSION['idUser'];
     <!-- Nucleo Icons -->
     <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
     <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
-  
+
     <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
     <!-- CSS Files -->
     <link id="pagestyle" href="../assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
-    <link id="pagestyle" href="../assets/css/style.css" rel="stylesheet" />    
+    <link id="pagestyle" href="../assets/css/style.css" rel="stylesheet" />
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
@@ -47,8 +49,7 @@ $id_user = $_SESSION['idUser'];
         <div class="sidenav-header">
             <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
                 aria-hidden="true" id="iconSidenav"></i>
-            <a class="navbar-brand m-0" href=" index.php "
-              >
+            <a class="navbar-brand m-0" href=" index.php ">
                 <img src="http://localhost/farmacia/assets/img/logos/mlogo.png" class="navbar-brand-img h-100"
                     alt="main_logo">
 
@@ -84,46 +85,72 @@ $id_user = $_SESSION['idUser'];
                         <span class="nav-link-text ms-1">Configuración</span>
                     </a>
                 </li>
+
+
+                <!--MENU DE PRODUCTOS -->
                 <li class="nav-item mt-3">
-                    <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">MENU DE PRODUCTOS</h6>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="tipo.php">
-                        <div
-                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="bi bi-prescription2 text-primary text-sm opacity-10"></i>
-                        </div>
-                        <span class="nav-link-text ms-1">Tipo</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="presentacion.php">                       
-                        <div
-                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="bi bi-capsule text-warning text-sm opacity-10"></i>
-                        </div>
-                        <span class="nav-link-text ms-1">Presentación</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="laboratorio.php">
-                        <div
-                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="ni ni-world-2 text-danger text-sm opacity-10"></i>
-                        </div>
-                        <span class="nav-link-text ms-1">Proveedor</span>
+                    <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
+                        href="#collapseProductos" role="button"
+                        aria-expanded="<?php echo $activoProductos ? 'true' : 'false'; ?>"
+                        aria-controls="collapseProductos">
+                        <span>
+                            <i class="bi bi-box-seam me-2"></i>
+                            MENÚ DE PRODUCTOS
+                        </span>
+                        <i class="bi bi-chevron-<?php echo $activoProductos ? 'up' : 'down'; ?>"></i>
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link " href="productos.php">
-                        <div
-                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="bi bi-lungs-fill text-dark text-sm opacity-10"></i>
-                        </div>
-                        <span class="nav-link-text ms-1">Productos</span>
-                    </a>
-                </li>
+                <div class="collapse <?php echo $activoProductos ? 'show' : ''; ?>" id="collapseProductos">
+                    <ul class="navbar-nav ps-3">
+                        <li class="nav-item">
+                            <a class="nav-link <?php echo ($paginaActual == 'tipo.php') ? 'active' : ''; ?>"
+                                href="tipo.php">
+                                <div
+                                    class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-prescription2 text-primary text-sm opacity-10"></i>
+                                </div>
+                                <span class="nav-link-text ms-1">Tipo</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link <?php echo ($paginaActual == 'presentacion.php') ? 'active' : ''; ?>"
+                                href="presentacion.php">
+                                <div
+                                    class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-capsule text-warning text-sm opacity-10"></i>
+                                </div>
+                                <span class="nav-link-text ms-1">Presentación</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link <?php echo ($paginaActual == 'laboratorio.php') ? 'active' : ''; ?>"
+                                href="laboratorio.php">
+                                <div
+                                    class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                                    <i class="ni ni-world-2 text-danger text-sm opacity-10"></i>
+                                </div>
+                                <span class="nav-link-text ms-1">Proveedor</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link <?php echo ($paginaActual == 'productos.php') ? 'active' : ''; ?>"
+                                href="productos.php">
+                                <div
+                                    class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-lungs-fill text-dark text-sm opacity-10"></i>
+                                </div>
+                                <span class="nav-link-text ms-1">Productos</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+
+
+
                 <li class="nav-item mt-3">
                     <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">MENU DE VENTAS</h6>
 
@@ -137,7 +164,7 @@ $id_user = $_SESSION['idUser'];
                         <span class="nav-link-text ms-1">Clientes</span>
                     </a>
                 </li>
-                 <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link " href="compras.php">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
@@ -146,7 +173,7 @@ $id_user = $_SESSION['idUser'];
                         <span class="nav-link-text ms-1">Nueva Compra</span>
                     </a>
                 </li>
-               <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link" href="ventas.php">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
@@ -154,7 +181,7 @@ $id_user = $_SESSION['idUser'];
                         </div>
                         <span class="nav-link-text ms-1">
                             Nueva Venta
-                           
+
                         </span>
                     </a>
                 </li>
@@ -176,7 +203,7 @@ $id_user = $_SESSION['idUser'];
                         <span class="nav-link-text ms-1">Historial Ventas</span>
                     </a>
                 </li>
-                 <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link " href="lista_compras.php">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
@@ -185,14 +212,14 @@ $id_user = $_SESSION['idUser'];
                         <span class="nav-link-text ms-1">Historial Compras</span>
                     </a>
                 </li>
-                 <li class="nav-item mt-3">
+                <li class="nav-item mt-3">
                     <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">MENU DE CONSULTAS</h6>
                 </li>
-                 <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link " href="registrar_consulta.php">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="bi bi-file-earmark-medical-fill text-primary text-sm opacity-10"></i>                            
+                            <i class="bi bi-file-earmark-medical-fill text-primary text-sm opacity-10"></i>
                         </div>
                         <span class="nav-link-text ms-1">Consulta</span>
                     </a>
@@ -230,7 +257,7 @@ $id_user = $_SESSION['idUser'];
             <div class="card card-plain shadow-none" id="sidenavCard">
                 <div class="card-body text-center w-100 pt-0 mt-8">
                     <div class="docs-info">
-                    <h6 class="panda_pos"> Desarrollo</h6>
+                        <h6 class="panda_pos"> Desarrollo</h6>
                         <a class="panda_pos" target="_blank">PandaCode - Sistema Farmacia V1.0</a>
 
                     </div>
@@ -260,8 +287,18 @@ $id_user = $_SESSION['idUser'];
                     <ul class="navbar-nav  justify-content-end">
                         <li class="nav-item d-flex align-items-center">
                             <a href="javascript:;" class="nav-link text-white font-weight-bold px-0">
-                                <i class="bi bi-sliders2 me-sm-1" aria-hidden="true"></i>
+
                                 <span class="d-sm-inline d-none">Perfil</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+                            <a href="javascript:;" class="nav-link text-white p-0" id="iconNavbarSidenav">
+                                <div class="sidenav-toggler-inner">
+                                    <i class="sidenav-toggler-line bg-white"></i>
+                                    <i class="sidenav-toggler-line bg-white"></i>
+                                    <i class="sidenav-toggler-line bg-white"></i>
+                                </div>
                             </a>
                         </li>
 
@@ -272,8 +309,8 @@ $id_user = $_SESSION['idUser'];
 
                             </a>
                         </li>
-
                     </ul>
+
                 </div>
             </div>
         </nav>

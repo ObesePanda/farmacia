@@ -53,7 +53,7 @@ include "includes/header.php";
     <div class="col-12">
         <div class="card mb-4">
             <div class="card-header pb-0">
-                <h6><i class="fas fa-users"></i> Control de Usuarios</h6>
+                <h6> 🧑‍⚕️ Control de Usuarios</h6>
             </div>
             <div class="card-body px-0 pt-0 pb-2">
                 <div class="table-responsive p-25">
@@ -63,7 +63,7 @@ include "includes/header.php";
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <i class="fas fa-signature"></i><label for="nombre">Nombre</label>
+                                       <i class="bi bi-activity"></i><label for="nombre">Nombre</label>
                                         <input type="text" class="form-control" placeholder="Ingrese Nombre"
                                             name="nombre" id="nombre">
                                         <input type="hidden" id="id" name="id">
@@ -72,7 +72,7 @@ include "includes/header.php";
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <i class="fas fa-envelope"></i><label for="correo">Correo</label>
+                                        <i class="bi bi-envelope-fill"></i><label for="correo">Correo</label>
                                         <input type="email" class="form-control"
                                             placeholder="Ingrese Correo Electrónico" name="correo" id="correo">
                                     </div>
@@ -80,7 +80,7 @@ include "includes/header.php";
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <i class="fas fa-user-md"></i><label for="usuario">Usuario</label>
+                                        <i class="bi bi-person-circle"></i><label for="usuario">Usuario</label>
                                         <input type="text" class="form-control" placeholder="Ingrese Usuario"
                                             name="usuario" id="usuario">
                                     </div>
@@ -88,7 +88,7 @@ include "includes/header.php";
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <i class="fas fa-lock"></i><label for="clave">Contraseña</label>
+                                       <i class="bi bi-lock-fill"></i><label for="clave">Contraseña</label>
                                         <input type="password" class="form-control" placeholder="Ingrese Contraseña"
                                             name="clave" id="clave">
                                     </div>

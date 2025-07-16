@@ -53,7 +53,7 @@ include_once "includes/header.php";
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label for="nombre" class="text-dark font-weight-bold">Nombre</label>
+                                <label for="nombre" class="text-dark font-weight-bold">💊 Nombre</label>
                                 <input type="text" placeholder="Ingrese Nombre" name="nombre" id="nombre"
                                     class="form-control">
                                 <input type="hidden" name="id" id="id">
@@ -112,10 +112,10 @@ include_once "includes/header.php";
                                         </td>
                                         <td class="align-middle text-center" style="width: 200px;">
                                             <a href="#" onclick="editarPresent(<?php echo $data['id']; ?>)"
-                                                class="btn btn-primary"><i class='fas fa-edit'></i></a>
+                                                class="btn btn-primary"><i class="bi bi-pencil-square"></i></a>
                                             <form action="eliminar_present.php?id=<?php echo $data['id']; ?>" method="post"
                                                 class="confirmar d-inline">
-                                                <button class="btn btn-danger" type="submit"><i class='fas fa-trash-alt'></i>
+                                                <button class="btn btn-danger" type="submit"><i class="bi bi-trash3-fill"></i>
                                                 </button>
                                             </form>
                                         </td>

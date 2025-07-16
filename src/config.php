@@ -33,7 +33,7 @@ include_once "includes/header.php";
     <div class="col-md-6 mx-auto">
         <div class="card">
             <div class="card-header card-header-primary">
-                <h4 class="card-title">Datos de la Empresa</h4>
+                <h4 class="card-title">💼  Datos de la Empresa</h4>
             </div>
             <div class="card-body">
                 <?php echo isset($alert) ? $alert : ''; ?>
@@ -56,7 +56,7 @@ include_once "includes/header.php";
                         <input type="text" name="direccion" class="form-control" value="<?php echo $data['direccion']; ?>" id="txtDirEmpresa" placeholder="Dirreción de la Empresa" required>
                     </div>
                     <div>
-                        <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Modificar Datos</button>
+                        <button type="submit" class="btn btn-primary"><i class="bi bi-floppy2-fill"></i> Modificar Datos</button>
                     </div>
 
                 </form>

@@ -52,7 +52,7 @@ include_once "includes/header.php";
                     <div class="row">
                         <div class="col-md-5">
                             <div class="form-group">
-                                <label for="nombre" class="text-dark font-weight-bold">Nombre</label>
+                                <label for="nombre" class="text-dark font-weight-bold">💊 Nombre</label>
                                 <input type="text" placeholder="Ingrese Nombre" name="nombre" id="nombre" class="form-control">
                                 <input type="hidden" name="id" id="id">
                             </div>
